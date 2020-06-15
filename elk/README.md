@@ -1,0 +1,5 @@
+1. vm.max_map_count 报错
+The vm.max_map_count setting should be set permanently in /etc/sysctl.conf:    
+$ grep vm.max_map_count /etc/sysctl.conf    
+vm.max_map_count=262144    
+To apply the setting on a live system type: sysctl -w vm.max_map_count=262144
